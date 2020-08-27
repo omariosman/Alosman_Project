@@ -1,0 +1,26 @@
+body {
+  height: 2000px;
+}
+
+.h5-adjust {
+  display: inline;
+
+}
+
+.h5andspan {
+  margin-bottom: 5px;
+}
+
+.img-adjust {
+  margin: auto; /*centered*/
+  width: 200px;
+  height: 200px;
+}
+
+.card-adjust {
+  margin-bottom: 65px;
+}
+
+.card-title-adjust {
+  text-align: center; 
+}

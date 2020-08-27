@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block body %}
+
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form userform %}
+    {% bootstrap_form profileform %}
+    <input type="submit" value="Submit" class="boxed-btn3 w-100" />
+  </form>
+
+</div>
+{% endblock %}

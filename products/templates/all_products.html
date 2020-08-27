@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+<a href="{% url 'products:add_product' %}">
+  <button class="btn btn-successful">Add Product</button>
+</a>
+
+
+
+
+
+
+
+{% block body %}
+<!-- PRODUCTS CARDS -->
+
+<div class=container>
+  <div class="row mt-4">
+
+    <!-- Loop on Cards -->
+    {% for product in all_products %}
+      <div class="col-md-4">
+        <div class="card card-adjust">
+          {% if product.img %}
+          <img class="card-img-top img-adjust" src="{{product.img.url}}" alt="Card image cap">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title card-title-adjust">{{product.name}}</h5>
+            <div class="h5andspan"><h5 class="h5-adjust">Model: </h5> <span>{{product.model}}</span></div>
+            <div class="h5andspan"><h5 class="h5-adjust">Price: </h5> <span>{{product.selling_price}}</span></div>
+            <a href="{% url 'products:product' product.code %}" class="btn btn-primary">Know more</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+  </div>
+</div>
+
+{% endblock body %}
+
+<!-- END PRODUCTS CARDS -->

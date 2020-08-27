@@ -1,0 +1,18 @@
+.my-container {
+    padding: 20px;
+    border: 2px solid #b4b9be;
+    border-radius: 5px;
+}
+
+.my-heading {
+    color: #1579ce
+}
+
+.new-list {
+    float: right;
+    list-style: none;
+}
+
+.new-list li {
+    list-style: none
+}
